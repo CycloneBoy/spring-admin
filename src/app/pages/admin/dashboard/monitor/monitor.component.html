@@ -1,0 +1,108 @@
+<div>
+  <div nz-row [nzGutter]="24" class="pt-lg">
+    <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="18">
+      <nz-card [nzTitle]="'活动实时交易情况' " [nzBordered]="false" class="mb-lg">
+        <div nz-row>
+          <div nz-col nzXs="24" nzSm="12" nzMd="6">
+            <span>
+                <p>今日交易总额</p>
+                <p>124,543,233</p>
+            </span>
+          </div>
+          <div nz-col nzXs="24" nzSm="12" nzMd="6">
+            <span>
+              <p>销售目标完成率</p>
+                <p>92%</p>
+            </span>
+
+          </div>
+          <div nz-col nzXs="24" nzSm="12" nzMd="6">
+            <span>
+              <p>活动剩余时间</p>
+                <p>00:00:00</p>
+            </span>
+          </div>
+          <div nz-col nzXs="24" nzSm="12" nzMd="6">
+            <span>
+              <p>每秒交易总额</p>
+                <p>234元/p>
+            </span>
+          </div>
+        </div>
+        <div class="map-chart">
+          <nz-tooltip [nzTitle]="'app.monitor.waiting-for-implementation' ">
+            <img
+              nz-tooltip
+              nzPlacement="top"
+              src="https://gw.alipayobjects.com/zos/rmsportal/HBWnDEUXCnGnGrRfrpKa.png"
+              alt="map"
+            />
+          </nz-tooltip>
+        </div>
+      </nz-card>
+    </div>
+    <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="6">
+      <div nz-row [nzGutter]="4" style="padding:16px 0">
+        <nz-card [nzTitle]="'有望达到预期' " [nzBordered]="false" class="mb-lg">
+          <div class="active-chart" >
+            <div>
+              <p>目标评估</p>
+              <p>有望达到预期</p>
+            </div>
+            <div></div>
+            <div class="active-grid">
+              <p>1111 亿元</p>
+              <p>2222 亿元</p>
+            </div>
+          </div>
+        </nz-card>
+      </div>
+
+      <nz-card
+        [nzTitle]="'券核效率' "
+        [nzBordered]="false"
+        [nzBodyStyle]="{ 'text-align': 'center' }"
+        class="mb-lg"
+      >
+        <div>
+          <p>100</p>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+  <div nz-row [nzGutter]="24">
+    <div nz-col nzXs="24" nzSm="24" nzLg="12" class="mb-lg">
+      <nz-card [nzTitle]="'各品类占比'" [nzBordered]="false" class="pie-card">
+        <div nz-row [nzGutter]="4" style="padding:16px 0">
+          <div nz-col [nzSpan]="8">
+              <p>中式快餐</p>
+              <p>10</p>
+          </div>
+          <div nz-col [nzSpan]="8">
+            <p>西餐</p>
+            <p>40</p>
+          </div>
+          <div nz-col [nzSpan]="8">
+            <p>火锅</p>
+            <p>105</p>
+          </div>
+
+        </div>
+      </nz-card>
+
+    </div>
+    <div nz-col nzXs="24" nzSm="24" nzLg="6" class="mb-lg">
+      <nz-card [nzTitle]="'热门搜索' " [nzBordered]="false">
+        <div>资源剩余</div>
+      </nz-card>
+    </div>
+    <div nz-col nzXs="24" nzSm="24" nzLg="6" class="mb-lg">
+      <nz-card [nzTitle]="'资源剩余' " [nzBordered]="false">
+        <div class="text-center">
+          资源剩余2
+        </div>
+      </nz-card>
+    </div>
+  </div>
+
+</div>

@@ -1,6 +1,7 @@
 // tslint:disable
 import * as Mock from 'mockjs';
 import { format } from 'date-fns';
+import {MockRequest} from './BaseModel';
 
 // region: mock data
 
@@ -395,6 +396,66 @@ function getActivities(): any[] {
   ];
 }
 
+const links = [
+  {
+    title: '操作一',
+    href: '',
+  },
+  {
+    title: '操作二',
+    href: '',
+  },
+  {
+    title: '操作三',
+    href: '',
+  },
+  {
+    title: '操作四',
+    href: '',
+  },
+  {
+    title: '操作五',
+    href: '',
+  },
+  {
+    title: '操作六',
+    href: '',
+  },
+];
+
+const members = [
+  {
+    id: 'members-1',
+    title: '科学搬砖组',
+    logo: 'https://gw.alipayobjects.com/zos/rmsportal/WdGqmHpayyMjiEhcKoVE.png',
+    link: '',
+  },
+  {
+    id: 'members-2',
+    title: '程序员日常',
+    logo: 'https://gw.alipayobjects.com/zos/rmsportal/zOsKZmFRdUtvpqCImOVY.png',
+    link: '',
+  },
+  {
+    id: 'members-3',
+    title: '设计天团',
+    logo: 'https://gw.alipayobjects.com/zos/rmsportal/dURIMkkrRFpPgTuzkwnB.png',
+    link: '',
+  },
+  {
+    id: 'members-4',
+    title: '中二少女团',
+    logo: 'https://gw.alipayobjects.com/zos/rmsportal/sfjbOqnsXXJgNCjCzDBL.png',
+    link: '',
+  },
+  {
+    id: 'members-5',
+    title: '骗你学计算机',
+    logo: 'https://gw.alipayobjects.com/zos/rmsportal/siCrBXXhmvTQGWPNLBow.png',
+    link: '',
+  },
+];
+
 // endregion
 
 export const CHARTS = {
@@ -418,6 +479,60 @@ export const CHARTS = {
   }),
 };
 
+function getFakeList(count: number = 20): any[] {
+  const list: any[] = [];
+  for (let i = 0; i < count; i += 1) {
+    list.push({
+      id: `fake-list-${i}`,
+      owner: user[i % 10],
+      title: titles[i % 8],
+      avatar: avatars[i % 8],
+      cover: parseInt((i / 4).toString(), 10) % 2 === 0 ? covers[i % 4] : covers[3 - (i % 4)],
+      status: ['active', 'exception', 'normal'][i % 3],
+      percent: Math.ceil(Math.random() * 50) + 50,
+      logo: avatars[i % 8],
+      href: 'https://ant.design',
+      updatedAt: new Date(new Date().getTime() - 1000 * 60 * 60 * 2 * i),
+      createdAt: new Date(new Date().getTime() - 1000 * 60 * 60 * 2 * i),
+      subDescription: desc[i % 5],
+      description:
+        '在中台产品的研发过程中，会出现不同的设计规范和实现方式，但其中往往存在很多类似的页面和组件，这些类似的组件会被抽离成一套标准规范。',
+      activeUser: Math.ceil(Math.random() * 100000) + 100000,
+      newUser: Math.ceil(Math.random() * 1000) + 1000,
+      star: Math.ceil(Math.random() * 100) + 100,
+      like: Math.ceil(Math.random() * 100) + 100,
+      message: Math.ceil(Math.random() * 10) + 10,
+      content:
+        '段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。',
+      members: [
+        {
+          avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ZiESqWwCXBRQoaPONSJe.png',
+          name: '曲丽丽',
+        },
+        {
+          avatar: 'https://gw.alipayobjects.com/zos/rmsportal/tBOxZPlITHqwlGjsJWaF.png',
+          name: '王昭君',
+        },
+        {
+          avatar: 'https://gw.alipayobjects.com/zos/rmsportal/sBxjgqiuHMGRkIjqlQCd.png',
+          name: '董娜娜',
+        },
+      ],
+    });
+  }
+
+  return list;
+}
+
+// 导出数据
+
 export const NOTICE = getNotice();
 
 export const ACTIVITIES = getActivities();
+
+export const LINKS = links;
+
+export const MEMBERS = members;
+
+export const GET_FAKE_LIST = (count: number = 20)  => getFakeList(count);
+

@@ -1,0 +1,19 @@
+<div>
+  <div class="text-center">
+    <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="addOnAfterBtn" style="width: 520px;">
+      <input type="text" nz-input placeholder="请输入" />
+      <ng-template #addOnAfterBtn>
+        <button nz-button nzType="primary" nzSize="large" nzSearch>Search</button>
+      </ng-template>
+    </nz-input-group>
+  </div>
+
+  <div>
+    <nz-tabset [nzSelectedIndex]="pos">
+      <nz-tab *ngFor="let i of tabs" [nzTitle]="i.tab" (nzClick)="to(i)"></nz-tab>
+    </nz-tabset>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
+

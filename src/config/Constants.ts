@@ -103,6 +103,31 @@ export class Constants {
             ]
         },
         {
+          title: '搜索',
+          key: '/search',
+          icon: 'search',
+          children: [
+            {
+              title: '搜索列表(文章)',
+              key: '/admin/search/articles',
+              icon: 'book',
+              children:[],
+            },
+            {
+              title: '搜索列表(项目)',
+              key: '/admin/search/applications',
+              icon: 'appstore',
+              children:[],
+            },
+            {
+              title: '搜索列表(应用)',
+              key: '/admin/search/projects',
+              icon: 'android',
+              children:[],
+            }
+          ]
+        },
+        {
             title: '富文本',
             key: '/rich',
             icon: 'file-markdown',

@@ -1,0 +1,42 @@
+<div>
+
+  <div nz-row [nzGutter]="24" class="pt-lg">
+    <!-- 第一排 -->
+    <div nz-col nzXs="24" nzSm="12" nzMd="12" nzLg="6">
+      <nz-card
+        nzTitle="总销售额"
+        [nzExtra]="action1"
+        [nzActions]="[footer1,actionSetting, actionEdit, actionEllipsis]"
+      >
+        <ng-template #action1>
+          <span nz-tooltip  nzTooltipTitle="总销售额">
+            <i nz-tooltip nz-icon nzType="info-circle"></i>
+          </span>
+        </ng-template>
+        <div flag="up" style="display:block; margin-top:2px;">
+          周同比
+          <span class="pl-sm">12%</span>
+        </div>
+        <div flag="down">
+          日同比
+          <span class="pl-sm">11%</span>
+        </div>
+        <ng-template #footer1>
+          <p class="text-truncate mb0">
+            日销售额
+            <span class="ml-sm">￥12,423</span>
+          </p>
+        </ng-template>
+        <ng-template #actionSetting>
+          <i nz-icon nzType="setting"></i>
+        </ng-template>
+        <ng-template #actionEdit>
+          <i nz-icon nzType="edit"></i>
+        </ng-template>
+        <ng-template #actionEllipsis>
+          <i nz-icon nzType="ellipsis"></i>
+        </ng-template>
+      </nz-card>
+    </div>
+  </div>
+</div>
