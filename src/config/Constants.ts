@@ -90,13 +90,13 @@ export class Constants {
             children: [
                 {
                     title: '基础表格',
-                    key: '/table/basic',
+                    key: '/admin/table/basic',
                     icon: 'home',
                     children:[],
                 },
                 {
                     title: '高级表格',
-                    key: '/table/high',
+                    key: '/admin/table/list',
                     icon: 'home',
                     children:[],
                 }
@@ -151,23 +151,29 @@ export class Constants {
             icon: 'instagram',
             children: [
                 {
-                    title: '柱形图',
-                    key: '/charts/bar',
+                    title: 'v1',
+                    key: '/admin/dashboard/v1',
                     icon: 'bar-chart',
                     children:[],
                 },
                 {
-                    title: '饼图',
-                    key: '/charts/pie',
+                    title: '分析页',
+                    key: '/admin/dashboard/analysis',
                     icon: 'pie-chart',
                     children:[],
                 },
                 {
-                    title: '折线图',
-                    key: '/charts/line',
+                    title: '监控页',
+                    key: '/admin/dashboard/monitor',
                     icon: 'line-chart',
                     children:[],
                 },
+                {
+                  title: '工作台',
+                  key: '/admin/dashboard/workplace',
+                  icon: 'line-chart',
+                  children:[],
+                }
             ]
         },
         {
@@ -210,4 +216,7 @@ export class Constants {
   public static URL_CALL_INFO_GET_BY_MONTH = "/api/call/bymonth";
 
   public static URL_CALL_INFO_GET_BY_YEAR = "/api/call/byyear";
+
+
+
 }
