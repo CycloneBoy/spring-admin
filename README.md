@@ -17,7 +17,7 @@ TODO: 后台API接入和echarts 图表展示
 ![dashboard_v3.png](./src/assets/github/dashboard_v3.png)
 
 
-#参考
+# 参考
 
 - ng-alian: https://ng-alain.github.io/ng-alain/#/widgets
 - angular-js: https://angular.cn/cli/generate#module
