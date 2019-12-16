@@ -10,11 +10,13 @@ import {CommonModule} from '@angular/common';
 import { FrontHeaderComponent } from './front-header/front-header.component';
 import { FrontFooterComponent } from './front-footer/front-footer.component';
 import { ContentComponent } from './content/content.component';
+import { TravelSearchComponent } from './travel-search/travel-search.component';
+import {NzButtonModule, NzInputModule, NzTabsModule} from 'ng-zorro-antd';
 
 
 @NgModule({
-  imports: [WelcomeRoutingModule, CommonModule],
-  declarations: [WelcomeComponent, NavRightComponent, TravelItemComponent, TravelListComponent, FrontHeaderComponent, FrontFooterComponent, ContentComponent],
+  imports: [WelcomeRoutingModule, CommonModule, NzInputModule, NzButtonModule, NzTabsModule],
+  declarations: [WelcomeComponent, NavRightComponent, TravelItemComponent, TravelListComponent, FrontHeaderComponent, FrontFooterComponent, ContentComponent, TravelSearchComponent],
   exports: [WelcomeComponent]
 })
 export class WelcomeModule { }
