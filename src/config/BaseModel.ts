@@ -39,6 +39,22 @@ export class TravelItem {
   authorName:string;
   authorImage:string;
   authorUrl:string;
+}
 
+export class GoodsItem {
+
+  id: number;
+  tid: number;
+  name:string;
+  imageUrl:string;
+  price:number;
+  stock:number;
+  description:string;
+  shopName:string;
+  iconUrl:string;
+  status:number;
+  categoryType:number;
+  commentCount:number;
+  weight:number;
 
 }

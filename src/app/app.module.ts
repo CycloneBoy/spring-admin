@@ -15,20 +15,22 @@ import {NgxEchartsModule} from 'ngx-echarts';
 registerLocaleData(zh);
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    IconsProviderModule,
-    NgZorroAntdModule,
-    FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    NgxEchartsModule
-  ],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        IconsProviderModule,
+        NgZorroAntdModule,
+        FormsModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        NgxEchartsModule
+    ],
+    providers: [{provide: NZ_I18N, useValue: zh_CN}],
+    exports: [
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

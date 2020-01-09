@@ -1,7 +1,7 @@
 // tslint:disable
 import * as Mock from 'mockjs';
 import { format } from 'date-fns';
-import {MockRequest, TravelItem} from './BaseModel';
+import {GoodsItem, MockRequest, TravelItem} from './BaseModel';
 
 // region: mock data
 
@@ -524,6 +524,30 @@ function getFakeList(count: number = 20): any[] {
   return list;
 }
 
+function getFakeGoodsList(count: number = 20): any[] {
+  const list: any[] = [];
+  for (let i = 0; i < count; i += 1) {
+    list.push({
+      id: i,
+      tid: i,
+      name: titles[i % 8],
+      imageUrl: parseInt((i / 4).toString(), 10) % 2 === 0 ? covers[i % 4] : covers[3 - (i % 4)],
+      price: i * 1000,
+      stock: i * 1000,
+      avatar: avatars[i % 8],
+      description: desc[i % 5],
+      shopName:['小米京东自营旗舰店', '小米自营旗舰店', '小米旗舰店'][i % 3],
+      iconUrl:"---",
+      status: i % 3,
+      categoryType: i * 10,
+      commentCount: i * 10,
+      weight: i * 10,
+    });
+  }
+
+  return list;
+}
+
 // 导出数据
 
 export const NOTICE = getNotice();
@@ -535,6 +559,8 @@ export const LINKS = links;
 export const MEMBERS = members;
 
 export const GET_FAKE_LIST = (count: number = 20)  => getFakeList(count);
+
+export const GET_FAKE_GOODS_LIST = (count: number = 20)  => getFakeGoodsList(count);
 
 //
 
@@ -685,3 +711,163 @@ export const TRAVEL_ITEM_LIST : TravelItem[] = [
   }
 ];
 
+export const GOODS_ITEM_LIST : GoodsItem[] = [
+  {
+    id: 12,
+    tid: 12,
+    name:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 紫玉幻境 游戏智能手机 小米",
+    imageUrl : "http://b4-q.mafengwo.net/s9/M00/5B/8C/wKgBs12M31yAanXfAAaid3775OQ509.jpg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90",
+    price:1699.00,
+    stock:100,
+    description:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 紫玉幻境 游戏智能手机 小米 红米\n" +
+    "【新品热销，六期免息】王一博同款火爆开售，购机赠耳机，赠完即止【K305G新品开售，评价晒单返京豆】",
+    shopName:"小米京东自营旗舰店",
+    iconUrl:"",
+    status:1,
+    categoryType:1,
+    commentCount:51000,
+    weight:0.559
+  },{
+    id: 13,
+    tid: 10003,
+    name:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 深海微光 游戏智能手机 小米 红米",
+    imageUrl : "http://b4-q.mafengwo.net/s9/M00/5B/8C/wKgBs12M31yAanXfAAaid3775OQ509.jpg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90",
+    price:1699.00,
+    stock:100,
+    description:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 紫玉幻境 游戏智能手机 小米 红米\n" +
+      "【新品热销，六期免息】王一博同款火爆开售，购机赠耳机，赠完即止【K305G新品开售，评价晒单返京豆】",
+    shopName:"小米京东自营旗舰店",
+    iconUrl:"",
+    status:1,
+    categoryType:1,
+    commentCount:51000,
+    weight:0.559
+  },
+  {
+    id: 14,
+    tid: 14,
+    name:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 紫玉幻境 游戏智能手机 小米",
+    imageUrl : "http://b4-q.mafengwo.net/s9/M00/5B/8C/wKgBs12M31yAanXfAAaid3775OQ509.jpg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90",
+    price:1699.00,
+    stock:100,
+    description:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 紫玉幻境 游戏智能手机 小米 红米\n" +
+      "【新品热销，六期免息】王一博同款火爆开售，购机赠耳机，赠完即止【K305G新品开售，评价晒单返京豆】",
+    shopName:"小米京东自营旗舰店",
+    iconUrl:"",
+    status:1,
+    categoryType:1,
+    commentCount:51000,
+    weight:0.559
+  },{
+    id: 15,
+    tid: 10003,
+    name:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 深海微光 游戏智能手机 小米 红米",
+    imageUrl : "http://b4-q.mafengwo.net/s9/M00/5B/8C/wKgBs12M31yAanXfAAaid3775OQ509.jpg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90",
+    price:1699.00,
+    stock:100,
+    description:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 紫玉幻境 游戏智能手机 小米 红米\n" +
+      "【新品热销，六期免息】王一博同款火爆开售，购机赠耳机，赠完即止【K305G新品开售，评价晒单返京豆】",
+    shopName:"小米京东自营旗舰店",
+    iconUrl:"",
+    status:1,
+    categoryType:1,
+    commentCount:51000,
+    weight:0.559
+  },
+
+  {
+    id: 16,
+    tid: 16,
+    name:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 紫玉幻境 游戏智能手机 小米",
+    imageUrl : "http://b4-q.mafengwo.net/s9/M00/5B/8C/wKgBs12M31yAanXfAAaid3775OQ509.jpg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90",
+    price:1699.00,
+    stock:100,
+    description:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 紫玉幻境 游戏智能手机 小米 红米\n" +
+      "【新品热销，六期免息】王一博同款火爆开售，购机赠耳机，赠完即止【K305G新品开售，评价晒单返京豆】",
+    shopName:"小米京东自营旗舰店",
+    iconUrl:"",
+    status:1,
+    categoryType:1,
+    commentCount:51000,
+    weight:0.559
+  },{
+    id: 17,
+    tid: 10003,
+    name:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 深海微光 游戏智能手机 小米 红米",
+    imageUrl : "http://b4-q.mafengwo.net/s9/M00/5B/8C/wKgBs12M31yAanXfAAaid3775OQ509.jpg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90",
+    price:1699.00,
+    stock:100,
+    description:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 紫玉幻境 游戏智能手机 小米 红米\n" +
+      "【新品热销，六期免息】王一博同款火爆开售，购机赠耳机，赠完即止【K305G新品开售，评价晒单返京豆】",
+    shopName:"小米京东自营旗舰店",
+    iconUrl:"",
+    status:1,
+    categoryType:1,
+    commentCount:51000,
+    weight:0.559
+  },
+
+  {
+    id: 18,
+    tid: 12,
+    name:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 紫玉幻境 游戏智能手机 小米",
+    imageUrl : "http://b4-q.mafengwo.net/s9/M00/5B/8C/wKgBs12M31yAanXfAAaid3775OQ509.jpg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90",
+    price:1699.00,
+    stock:100,
+    description:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 紫玉幻境 游戏智能手机 小米 红米\n" +
+      "【新品热销，六期免息】王一博同款火爆开售，购机赠耳机，赠完即止【K305G新品开售，评价晒单返京豆】",
+    shopName:"小米京东自营旗舰店",
+    iconUrl:"",
+    status:1,
+    categoryType:1,
+    commentCount:51000,
+    weight:0.559
+  },{
+    id: 19,
+    tid: 10003,
+    name:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 深海微光 游戏智能手机 小米 红米",
+    imageUrl : "http://b4-q.mafengwo.net/s9/M00/5B/8C/wKgBs12M31yAanXfAAaid3775OQ509.jpg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90",
+    price:1699.00,
+    stock:100,
+    description:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 紫玉幻境 游戏智能手机 小米 红米\n" +
+      "【新品热销，六期免息】王一博同款火爆开售，购机赠耳机，赠完即止【K305G新品开售，评价晒单返京豆】",
+    shopName:"小米京东自营旗舰店",
+    iconUrl:"",
+    status:1,
+    categoryType:1,
+    commentCount:51000,
+    weight:0.559
+  },
+  {
+    id: 20,
+    tid: 12,
+    name:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 紫玉幻境 游戏智能手机 小米",
+    imageUrl : "http://b4-q.mafengwo.net/s9/M00/5B/8C/wKgBs12M31yAanXfAAaid3775OQ509.jpg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90",
+    price:1699.00,
+    stock:100,
+    description:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 紫玉幻境 游戏智能手机 小米 红米\n" +
+      "【新品热销，六期免息】王一博同款火爆开售，购机赠耳机，赠完即止【K305G新品开售，评价晒单返京豆】",
+    shopName:"小米京东自营旗舰店",
+    iconUrl:"",
+    status:1,
+    categoryType:1,
+    commentCount:51000,
+    weight:0.559
+  },{
+    id: 22,
+    tid: 10003,
+    name:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 深海微光 游戏智能手机 小米 红米",
+    imageUrl : "http://b4-q.mafengwo.net/s9/M00/5B/8C/wKgBs12M31yAanXfAAaid3775OQ509.jpg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90",
+    price:1699.00,
+    stock:100,
+    description:"Redmi K30 120Hz流速屏 前置挖孔双摄 6GB+128GB 紫玉幻境 游戏智能手机 小米 红米\n" +
+      "【新品热销，六期免息】王一博同款火爆开售，购机赠耳机，赠完即止【K305G新品开售，评价晒单返京豆】",
+    shopName:"小米京东自营旗舰店",
+    iconUrl:"",
+    status:1,
+    categoryType:1,
+    commentCount:51000,
+    weight:0.559
+  }
+
+];
