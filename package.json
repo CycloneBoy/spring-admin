@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.14",
     "bootstrap": "^4.4.1",
     "echarts": "^4.5.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mockjs": "^1.1.0",
     "ng-zorro-antd": "^8.5.2",
     "ngx-echarts": "^4.2.2",
